@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Démo Calendrier</string>
+    <string name="but_next_wkt">Prochaines séances</string>
+    <string name="sel_day">Sélectionner un jour du calendrier pour afficher son éveneme</string>
+    <string name="no_wkt">Pas de séance programmée pour ce jour</string>
+    <string name="no_wkt_plan">Aucune séance planifiée</string>
+</resources>

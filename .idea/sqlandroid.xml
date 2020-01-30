@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SQLAndroidSettings">
+    <option name="databases">
+      <map>
+        <entry key="bionic_C:\Users\Elias\Documents\projets\Bionic_Android\Bionic2\AndroidSqlEditorDatabases\">
+          <value>
+            <list>
+              <option value="MKJNW18809000581" />
+              <option value="/databases/bionic.db" />
+              <option value="bionic" />
+              <option value="bionic" />
+              <option value="false" />
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="packageNameByDirectory">
+      <map>
+        <entry key="C:\Users\Elias\Documents\projets\Bionic_Android\Bionic2\AndroidSqlEditorDatabases\" value="com.bionic2" />
+      </map>
+    </option>
+    <option name="storageVersion" value="2" />
+  </component>
+</project>

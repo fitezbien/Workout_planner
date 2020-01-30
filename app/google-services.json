@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "711717445946",
+    "firebase_url": "https://fit-tracker-243107.firebaseio.com",
+    "project_id": "fit-tracker-243107",
+    "storage_bucket": "fit-tracker-243107.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:711717445946:android:03bea89c9aed8724",
+        "android_client_info": {
+          "package_name": "com.bionic2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "711717445946-mg10qre188dvpq96h73su5pefqmft0tn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bionic2",
+            "certificate_hash": "89c16cda11ba33bf37bb994bb72df0e51d1734e9"
+          }
+        },
+        {
+          "client_id": "711717445946-v9vuemas3rqaf9sft0g64solp566vt6c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDe31nWvF-tjXn4sxUgq4T_02cbJnXGfpI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "711717445946-v9vuemas3rqaf9sft0g64solp566vt6c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
