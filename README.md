@@ -14,6 +14,5 @@ In this demo, i use the plugin's actions to retrieve my datas. Some functions ar
 
 Good reading !
 
-
-![Screenshot1](https://user-images.githubusercontent.com/30973868/73472086-c5205600-438a-11ea-9457-9b210151abd0.jpg)
-![Screenshot2](https://user-images.githubusercontent.com/30973868/73472128-d5d0cc00-438a-11ea-9652-70a8c79028cd.jpg)
+![workoutplan1](https://user-images.githubusercontent.com/30973868/73472841-ff3e2780-438b-11ea-8cca-5c199675e285.jpg)
+![workoutplan2](https://user-images.githubusercontent.com/30973868/73472849-01a08180-438c-11ea-9f52-d916f02a2b5b.jpg)
