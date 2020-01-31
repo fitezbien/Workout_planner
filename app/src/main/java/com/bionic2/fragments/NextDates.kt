@@ -1,4 +1,4 @@
-package com.bionic2
+package com.bionic2.fragments
 
 import android.app.AlertDialog
 import android.app.Dialog
@@ -10,12 +10,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bionic2.R
 import com.bionic2.View.RecycleListAdapter
 import com.bionic2.activities.CalendarActivity
 import com.bionic2.entities.ListItems
 import java.util.*
 import kotlin.collections.ArrayList
 
+//Popup Affichant les prochains évenements
 
 class NextDates(listWorkouts: ArrayList<ListItems>) : DialogFragment(){
 

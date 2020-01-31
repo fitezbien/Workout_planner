@@ -1,7 +1,5 @@
 package com.bionic2.activities
 
-//import com.bionic2.Services.ConnexionService
-
 import android.content.Context
 import android.os.Bundle
 import android.view.View
@@ -10,9 +8,9 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.bionic2.entities.DateTime
 import com.bionic2.entities.ListItems
-import com.bionic2.NextDates
+import com.bionic2.fragments.NextDates
 import com.bionic2.R
-import com.bionic2.View.RobotoCalendarView
+import com.bionic2.calendar.RobotoCalendarView
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 import java.text.SimpleDateFormat
 import java.time.LocalDate
@@ -20,6 +18,12 @@ import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.collections.ArrayList
+
+/**
+ * Démo calendar / Workout Planner
+ *
+ * @author Elias DE LA BROSSE
+ */
 
 
 class CalendarActivity : AppCompatActivity(), RobotoCalendarView.RobotoCalendarListener ,  View.OnClickListener{
@@ -84,14 +88,14 @@ class CalendarActivity : AppCompatActivity(), RobotoCalendarView.RobotoCalendarL
         txtDisplayNextWorkout.text = displayNextWorkout(todayNumber)  // affiche la date pour la prochaine séance
 
         //def des paramètres de robotoClendarView
-
         robotoCalendarView.setRobotoCalendarListener(this)
 
         robotoCalendarView.setShortWeekDays(true)
 
         robotoCalendarView.showDateTitle(true)
 
-        getWorkoutsPlans(robotoCalendarView, todayNumber)  //Affichage des markers : old events (points gris) next events (points rouge)
+        //Affichage des markers : old events (points jaune) next events (points rouge)
+        getWorkoutsPlans(robotoCalendarView, todayNumber)
 
     }
 
@@ -100,7 +104,7 @@ class CalendarActivity : AppCompatActivity(), RobotoCalendarView.RobotoCalendarL
     {
         when(v.id){
 
-            R.id.but_show_next_workouts ->{
+            R.id.but_show_next_workouts ->{//création de la Popup qui affiche la liste des prochains évenements
 
                 val dialogFragment = NextDates(listWorkouts)
                 val bundle = Bundle()
@@ -120,7 +124,7 @@ class CalendarActivity : AppCompatActivity(), RobotoCalendarView.RobotoCalendarL
         }
 
     }
-
+// 1 Overrides de RobotoCalendarView
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed();
         return true;
@@ -140,8 +144,24 @@ class CalendarActivity : AppCompatActivity(), RobotoCalendarView.RobotoCalendarL
 
     }
 
+    override fun onDayLongClick(date: Date) {
 
-    fun getWorkoutsPlans(calendarView: RobotoCalendarView, today: Long){
+    }
+
+    override fun onRightButtonClick() {//flèche droite du défilement des mois
+
+        getWorkoutsPlans(robotoCalendarView, todayNumber)
+
+    }
+
+    override fun onLeftButtonClick() {//flèche gauche du défilement des mois
+
+        getWorkoutsPlans(robotoCalendarView, todayNumber)
+    }
+
+    //2 Méthodes supplémentaires d'exemples de cas d'usage du calendrier
+
+    fun getWorkoutsPlans(calendarView: RobotoCalendarView, today: Long){// Affichage des markers sous les jours (points jaune et rouge)
 
         val thisMonth = monthString.format(calendarView.date)
         var wDateString: String
@@ -156,16 +176,16 @@ class CalendarActivity : AppCompatActivity(), RobotoCalendarView.RobotoCalendarL
                 workoutDate = parseStringToDate(wDateString)
                 workoutDateNumbers = parseDateToLong(wDateString)
 
-                if(workoutDateNumbers >= today)
+                if(workoutDateNumbers >= today)// prochains
                 calendarView.markCircleImage1(workoutDate)
-                else
+                else // anciens
                 calendarView.markCircleImage2(workoutDate)
 
             }
         }
     }
 
-    fun displayWorkoutFromDayCick(textView: TextView,dateClicked: Long, context: Context){
+    fun displayWorkoutFromDayCick(textView: TextView,dateClicked: Long, context: Context){//Affichage des évenements enregistrés dans le calendrier
 
         var workoutDate: String
         var workoutDateNumber: Long
@@ -187,7 +207,7 @@ class CalendarActivity : AppCompatActivity(), RobotoCalendarView.RobotoCalendarL
 
     }
 
-    fun displayNextWorkout (todayDate: Long): String{
+    fun displayNextWorkout (todayDate: Long): String{// Affichage du prochain évenement
 
         var prevDate = 0L
         var textToDisplay = ""
@@ -256,19 +276,6 @@ class CalendarActivity : AppCompatActivity(), RobotoCalendarView.RobotoCalendarL
         return mdate
     }
 
-    override fun onDayLongClick(date: Date) {
 
-    }
-
-    override fun onRightButtonClick() {
-
-        getWorkoutsPlans(robotoCalendarView, todayNumber)
-
-    }
-
-    override fun onLeftButtonClick() {
-
-        getWorkoutsPlans(robotoCalendarView, todayNumber)
-    }
 
 }

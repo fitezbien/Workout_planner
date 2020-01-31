@@ -24,7 +24,7 @@
         android:background="@drawable/top_line" />
 
 
-    <com.bionic2.View.RobotoCalendarView
+    <com.bionic2.calendar.RobotoCalendarView
         android:id="@+id/robotoCalendarPicker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
