@@ -1,5 +1,7 @@
 # Workout_planner
 
+Requirement : Android 8.0 (API level 26)
+
 FR:
 Exemple d'utilisation du plugin utile "RobotoCalendarView" développé par Marco Hernaiz Cao.
 
