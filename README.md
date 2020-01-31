@@ -5,7 +5,7 @@ Requirement : Android 8.0 (API level 26)
 FR:
 Exemple d'utilisation du plugin utile "RobotoCalendarView" développé par Marco Hernaiz Cao.
 
-Dans cette démo, j'utilise les actions du plugin pour récupérer mes données. Certaines fonctions sont facilement utilisables pour personnaliser votre calendrier dans le but de faire tout ce dont vous avez besoin !!
+Dans cette démo, j'utilise les actions de ce plugin pour récupérer mes données. Certaines fonctions sont facilement utilisables pour personnaliser votre calendrier dans le but de faire tout ce dont vous avez besoin !!
 
 Bonne lecture !
 
